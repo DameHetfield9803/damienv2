@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className="mx-auto text-center p-4 text-lg">
       <h1 className="text-3xl font-light">
-        <TypeAnimation sequence={["Hi! I'm Damien."]} />
+        <TypeAnimation sequence={["Hi! I'm Damien."]} className="text-teal-600"/>
       </h1>
       <Image
         src={damien}

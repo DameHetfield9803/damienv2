@@ -1,22 +1,65 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "./ui/navigation-menu";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <NavigationMenu className="flex flex-col p-3">
+    <NavigationMenu className="mx-auto p-5">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Social Media</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink href="https://www.linkedin.com/in/damien-foo-a2a246210/" target="_blank">Linkedin</NavigationMenuLink>
-            <NavigationMenuLink href="https://github.com/DameHetfield9803" target="_blank">Github</NavigationMenuLink>
-            <NavigationMenuLink href="https://instagram.com/dame_fdk" target="_blank">Instagram</NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link
+                href="https://www.linkedin.com/in/damien-foo-a2a246210/"
+                target="_blank"
+              >
+                <Button>LinkedIn</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="https://github.com/DameHetfield9803" target="_blank">
+                <Button>GitHub</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="https://instagram.com/dame_fdk" target="_blank">
+                <Button>Instagram</Button>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <Button><Link href={"/about"}>About Me</Link></Button>
-        <Button><Link href={"/contact"}>Contact Me</Link></Button>
-        <div><ModeToggle/></div>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Navigations</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <NavigationMenuLink asChild>
+              <Link href="/">
+                <Button>Home</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="/about">
+                <Button>About Me</Button>
+              </Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink asChild>
+              <Link href="/contact">
+                <Button>Contact Me</Button>
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <ModeToggle />
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
