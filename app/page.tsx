@@ -8,24 +8,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
-import damien from "../public/Damien.webp";
-import go from "../public/go.png";
-import ts from "../public/ts.png";
-import php from "../public/php.png";
-import cpp from "../public/cpp.png";
-import cs from '../public/csharp.png'
-import python from '../public/python.png'
 export default function Home() {
   return (
     <main className="mx-auto text-center p-4 text-lg">
       <h1 className="text-3xl font-light">
         <TypeAnimation sequence={["Hi! I'm Damien."]} className="text-teal-600"/>
       </h1>
-      <Image
-        src={damien}
+      <img
+        src="../Damien.webp"
         alt="Damien"
-        className="mx-auto rounded-4xl scale-85 mt-3"
+        className="mx-auto rounded-4xl scale-90 mt-3"
       />
       <p className="mt-2">I do software engineering and cybersecurity.</p>
       <p className="mt-3">Languages I use</p>
@@ -34,7 +26,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={go} alt="GoLang" />
+                <img src={"../go.png"} alt="GoLang" />
               </CardContent>
               <CardFooter>Golang</CardFooter>
             </Card>
@@ -42,7 +34,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={ts} alt="TypeScript" className="rounded-4xl"/>
+                <img src="../ts.webp" alt="TypeScript" className="rounded-4xl"/>
               </CardContent>
               <CardFooter>TypeScript</CardFooter>
             </Card>
@@ -50,7 +42,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={php} alt="PHP" />
+                <img src="../php.png" alt="PHP" />
               </CardContent>
               <CardFooter>PHP</CardFooter>
             </Card>
@@ -58,7 +50,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={cpp} alt="C++" />
+                <img src="../cpp.png" alt="C++" />
               </CardContent>
               <CardFooter>C++</CardFooter>
             </Card>
@@ -66,7 +58,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={cs} alt="C#" />
+                <img src="../csharp.png" alt="C#" />
               </CardContent>
               <CardFooter>C#</CardFooter>
             </Card>
@@ -74,9 +66,17 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <Image src={python} alt="Python" />
+                <img src='../python.png' alt="Python" />
               </CardContent>
               <CardFooter>Python</CardFooter>
+            </Card>
+          </CarouselItem>
+          <CarouselItem className="flex-shrink-0 snap-start w-full">
+            <Card className="w-full">
+              <CardContent>
+                <img src='../java.png' alt="Python" />
+              </CardContent>
+              <CardFooter>Java</CardFooter>
             </Card>
           </CarouselItem>
         </CarouselContent>
