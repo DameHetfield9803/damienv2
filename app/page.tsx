@@ -12,10 +12,13 @@ export default function Home() {
   return (
     <main className="mx-auto text-center p-4 text-lg">
       <h1 className="text-3xl font-light">
-        <TypeAnimation sequence={["Hi! I'm Damien."]} className="text-teal-600"/>
+        <TypeAnimation
+          sequence={["Hi! I'm Damien."]}
+          className="text-teal-600"
+        />
       </h1>
       <img
-        src="../Damien.webp"
+        src="../Damien.jpg"
         alt="Damien"
         className="mx-auto rounded-4xl scale-90 mt-3"
       />
@@ -26,7 +29,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src={"../go.png"} alt="GoLang" />
+                <img src={"../go.jpg"} alt="GoLang" />
               </CardContent>
               <CardFooter>Golang</CardFooter>
             </Card>
@@ -34,7 +37,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src="../ts.webp" alt="TypeScript" className="rounded-4xl"/>
+                <img src="../ts.jpg" alt="TypeScript" className="rounded-4xl" />
               </CardContent>
               <CardFooter>TypeScript</CardFooter>
             </Card>
@@ -50,7 +53,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src="../cpp.png" alt="C++" />
+                <img src="../cpp.jpg" alt="C++" />
               </CardContent>
               <CardFooter>C++</CardFooter>
             </Card>
@@ -58,7 +61,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src="../csharp.png" alt="C#" />
+                <img src="../csharp.jpg" alt="C#" />
               </CardContent>
               <CardFooter>C#</CardFooter>
             </Card>
@@ -66,7 +69,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src='../python.png' alt="Python" />
+                <img src="../python.jpg" alt="Python" />
               </CardContent>
               <CardFooter>Python</CardFooter>
             </Card>
@@ -74,7 +77,7 @@ export default function Home() {
           <CarouselItem className="flex-shrink-0 snap-start w-full">
             <Card className="w-full">
               <CardContent>
-                <img src='../java.png' alt="Python" />
+                <img src="../java.jpg" alt="Java" />
               </CardContent>
               <CardFooter>Java</CardFooter>
             </Card>
